@@ -1,4 +1,4 @@
-package me.bukp.smart.controller;
+package me.bukp.domon.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

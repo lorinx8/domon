@@ -1,4 +1,4 @@
-package me.bukp.smart.util;
+package me.bukp.domon.util;
 
 /**
  * 转型操作工具类

@@ -1,4 +1,4 @@
-package me.bukp.smart.util;
+package me.bukp.domon.util;
 
 import org.apache.commons.lang3.StringUtils;
 

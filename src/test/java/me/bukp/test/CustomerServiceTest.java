@@ -1,7 +1,7 @@
 package me.bukp.test;
 
-import me.bukp.smart.model.Customer;
-import me.bukp.smart.service.CustomerService;
+import me.bukp.domon.model.Customer;
+import me.bukp.domon.service.CustomerService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

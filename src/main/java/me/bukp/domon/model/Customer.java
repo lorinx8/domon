@@ -1,4 +1,4 @@
-package me.bukp.smart.model;
+package me.bukp.domon.model;
 
 /**
  * Created by bukp on 2016/6/25.
