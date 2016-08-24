@@ -1,5 +1,6 @@
 package me.bukp.test;
 
+import me.bukp.domon.helper.DatabaseHelper;
 import me.bukp.domon.model.Customer;
 import me.bukp.domon.service.CustomerService;
 import org.junit.Assert;
@@ -15,7 +16,6 @@ import java.util.Map;
  */
 public class CustomerServiceTest {
 
-
     private final CustomerService customerService;
 
     public CustomerServiceTest() {
@@ -24,7 +24,7 @@ public class CustomerServiceTest {
 
     @Before
     public void init() {
-        // TODO 初始化数据库
+        DatabaseHelper.executeSqlFile("db_init.sql");
     }
 
     @Test
