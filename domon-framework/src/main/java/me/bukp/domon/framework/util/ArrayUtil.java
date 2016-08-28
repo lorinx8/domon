@@ -29,5 +29,4 @@ public final class ArrayUtil {
         return ArrayUtils.isEmpty(array);
     }
 
-
 }
