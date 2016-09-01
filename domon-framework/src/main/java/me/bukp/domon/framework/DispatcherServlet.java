@@ -1,7 +1,11 @@
 package me.bukp.domon.framework;
 
+import me.bukp.domon.framework.helper.ConfigHelper;
+
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +25,15 @@ public class DispatcherServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-        super.init(config);
+        // 初始化相关helper类
+        HelpLoader.init();
+        // 获取servletcontext对象，用于注册servlet
+        ServletContext servletContext = config.getServletContext();
+        // 注册处理jsp的servlet
+        ServletRegistration jspServlet = servletContext.getServletRegistration("jsp");
+        jspServlet.addMapping(ConfigHelper.getAppJspPath() + "*");
+        // 注册处理静态资源的默认servlet
+        ServletRegistration defaultServlet = servletContext.getServletRegistration("default");
+        defaultServlet.addMapping(ConfigHelper.getAppAssetPath() + "*");
     }
 }
